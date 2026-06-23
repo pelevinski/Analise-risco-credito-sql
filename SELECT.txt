@@ -1,0 +1,41 @@
+SELECT 
+    loan_intent AS "Motivo do Empréstimo",
+    COUNT(*) AS "Total de Contratos",
+    SUM(loan_status) AS "Total Inadimplentes",
+    ROUND((SUM(loan_status)::numeric / COUNT(*)) * 100, 2) AS "Taxa de Inadimplência (%)"
+FROM clientes_credito
+GROUP BY loan_intent
+ORDER BY "Taxa de Inadimplência (%)" DESC;
+
+
+
+-----------------------------------------------------------
+
+SELECT 
+    loan_status AS "Inadimplente (1)",
+    ROUND(AVG(loan_percent_income) * 100, 2) AS "Comprometimento Médio da Renda (%)",
+    ROUND(AVG(loan_int_rate), 2) AS "Taxa de Juros Média (%)"
+FROM clientes_credito
+GROUP BY loan_status;
+
+
+-----------------------------------------------------------
+
+SELECT 
+    person_home_ownership AS "Tipo de Moradia",
+    COUNT(*) AS "Total Clientes",
+    SUM(loan_status) AS "Total Inadimplentes",
+    ROUND((SUM(loan_status)::numeric / COUNT(*)) * 100, 2) AS "Taxa de Calote (%)"
+FROM clientes_credito
+GROUP BY person_home_ownership
+ORDER BY "Taxa de Calote (%)" DESC;
+
+-----------------------------------------------------------
+
+SELECT 
+    cb_person_default_on_file AS "Já era Inadimplente?",
+    COUNT(*) AS "Total Clientes",
+    SUM(loan_status) AS "Novos Calotes",
+    ROUND((SUM(loan_status)::numeric / COUNT(*)) * 100, 2) AS "Nova Taxa de Calote (%)"
+FROM clientes_credito
+GROUP BY cb_person_default_on_file;
