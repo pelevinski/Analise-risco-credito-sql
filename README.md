@@ -96,6 +96,6 @@ Com base nas análises extraídas do banco de dados, as recomendações para a D
 
 \---
 
-
+###### url original dos dados - https://www.kaggle.com/datasets/laotse/credit-risk-dataset?resource=download
 ###### **Projeto desenvolvido de forma 100% privada e local, focado em Engenharia e Análise de Dados para o setor financeiro.**
 
