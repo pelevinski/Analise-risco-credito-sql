@@ -28,11 +28,13 @@ Os dados passaram por uma etapa de extração e tratamento inicial em Python, e 
 
 ### **📂 Estrutura do Repositório**
 
-\* **`limpeza\_dados\_credit.ipynb`/`limpeza\_dados\_credit.py`:** Contém o script Python utilizado no tratamento inicial do dataset.
+\* `**README.md`:** Relatório executivo com os insights de negócio gerados pelo projeto.
+
 
 \* **`SELECT.txt`:** Arquivo contendo todos os scripts de criação de tabelas e queries de negócios executadas no pgAdmin.
 
-\* `**README.md`:** Relatório executivo com os insights de negócio gerados pelo projeto.
+
+\* **`limpeza\_dados\_credit.ipynb`/`limpeza\_dados\_credit.py`:** Contém o script Python utilizado no tratamento inicial do dataset.
 
 
 
