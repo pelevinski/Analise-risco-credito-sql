@@ -36,7 +36,7 @@ Os dados passaram por uma etapa de extração e tratamento inicial em Python, e 
 
 \* **`limpeza\_dados\_credit.ipynb`/`limpeza\_dados\_credit.py`:** Contém o script Python utilizado no tratamento inicial do dataset.
 
-
+\* **`dashboard_credito.pbix`:** Contém gráficos explicativos do panorama geral de empréstimo na página 1 e gráficos explicativos de insights adquiridos via SQL.
 
 \---
 
